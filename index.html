@@ -27,19 +27,61 @@
   <meta name="twitter:description" content="A beautifully minimal iOS app for all 5 daily prayers. Free &amp; privacy-first." />
   <meta name="twitter:image" content="https://myprayerclock.app/Home%20Page.png" />
 
-  <!-- ─── JSON-LD Structured Data ──────────────────────────────── -->
+  <!-- ─── JSON-LD: MobileApplication ─────────────────────────── -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "MobileApplication",
     "name": "My Prayer Clock",
-    "operatingSystem": "iOS",
+    "operatingSystem": "iOS 26+",
     "applicationCategory": "LifestyleApplication",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
     "description": "A beautifully minimal iOS app for accurate Islamic prayer times. Qibla compass, Ramadan mode, prayer tracker, widgets. Privacy-first.",
     "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "500", "bestRating": "5" },
     "url": "https://myprayerclock.app/",
     "downloadUrl": "https://apps.apple.com/app/my-prayer-clock/id6757612033"
+  }
+  </script>
+
+  <!-- ─── JSON-LD: FAQPage ───────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is My Prayer Clock really free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — completely free with no in-app purchases, no subscriptions, and no ads. It's built as a service to the Muslim community."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate are the prayer times?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Prayer times are calculated using your precise GPS location with established Islamic calculation methods including ISNA, MWL, Egyptian, and Umm al-Qura. Times update automatically as you travel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the app track my data or require an account?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. My Prayer Clock collects zero personal data. No account needed, no analytics, no third-party tracking. Your location stays on your device."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What features does My Prayer Clock include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All 5 daily prayer times, Qibla compass, Ramadan fasting tracker with suhoor and iftar times, prayer streak tracking, home screen widgets, and both light and dark modes. Works on iPhone with iOS 26 or later."
+        }
+      }
+    ]
   }
   </script>
 
@@ -74,7 +116,7 @@
   </header>
 
   <!-- ══════════════════════════════════════════════════════════
-       HERO — fills full viewport
+       HERO — fills full viewport on desktop, scrolls on mobile
   ══════════════════════════════════════════════════════════ -->
   <main class="hero" role="main" aria-label="My Prayer Clock">
     <div class="hero__bg" aria-hidden="true"></div>
@@ -85,7 +127,7 @@
 
       <!-- LEFT: Copy -->
       <div class="hero__copy">
-        <p class="hero__eyebrow animate-fadeup" style="--delay:0.05s">Free for iPhone · iOS 16+</p>
+        <p class="hero__eyebrow animate-fadeup" style="--delay:0.05s">Free for iPhone · iOS 26+</p>
         <h1 class="hero__headline animate-fadeup" style="--delay:0.15s">
           Prayer Times.<br /><em>Always with you.</em>
         </h1>
@@ -107,22 +149,18 @@
         <!-- Compact feature pills -->
         <div class="hero__features animate-fadeup" style="--delay:0.62s" aria-label="Key features">
           <div class="hero__feat">
-            <!-- Clock -->
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><polyline points="8,4.5 8,8 10.5,9.5"/></svg>
             <span>All 5 prayers</span>
           </div>
           <div class="hero__feat">
-            <!-- Shield check -->
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 1L2 3.5v4.7C2 11.4 4.7 14.3 8 15c3.3-.7 6-3.6 6-6.8V3.5L8 1z"/><polyline points="5.5,8 7.2,9.8 10.5,6.5"/></svg>
             <span>Privacy first</span>
           </div>
           <div class="hero__feat">
-            <!-- Half circle sun/moon -->
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3a5 5 0 0 1 0 10A5 5 0 0 0 8 3z" fill="currentColor" stroke="none"/><circle cx="8" cy="8" r="5"/><line x1="8" y1="1" x2="8" y2="2.5"/><line x1="8" y1="13.5" x2="8" y2="15"/><line x1="1" y1="8" x2="2.5" y2="8"/><line x1="13.5" y1="8" x2="15" y2="8"/></svg>
             <span>Light &amp; dark</span>
           </div>
           <div class="hero__feat">
-            <!-- Compass -->
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><polygon points="10,6 6,8 6,10 10,8" fill="currentColor" stroke="none"/><polygon points="10,6 8,6 6,10 8,10" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
             <span>Qibla compass</span>
           </div>
@@ -169,10 +207,57 @@
     </div><!-- /.hero__inner -->
   </main>
 
-  <!-- Slim footer -->
+  <!-- ══════════════════════════════════════════════════════════
+       FAQ — drives AI/SEO featured snippets
+  ══════════════════════════════════════════════════════════ -->
+  <section class="faq" aria-labelledby="faq-heading">
+    <div class="faq__inner">
+      <h2 id="faq-heading" class="faq__heading">Frequently Asked Questions</h2>
+
+      <details class="faq__item" open>
+        <summary class="faq__question">Is My Prayer Clock really free?</summary>
+        <p class="faq__answer">Yes — completely free with no in-app purchases, no subscriptions, and no ads. It's built as a service to the Muslim community.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__question">How accurate are the prayer times?</summary>
+        <p class="faq__answer">Prayer times are calculated using your precise GPS location with established Islamic calculation methods including ISNA, MWL, Egyptian, and Umm al-Qura. Times update automatically as you travel.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__question">Does the app track my data or require an account?</summary>
+        <p class="faq__answer">No. My Prayer Clock collects zero personal data. No account needed, no analytics, no third-party tracking. Your location stays on your device.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__question">What features does My Prayer Clock include?</summary>
+        <p class="faq__answer">All 5 daily prayer times, Qibla compass, Ramadan fasting tracker with suhoor and iftar times, prayer streak tracking, home screen widgets, and both light and dark modes. Works on iPhone with iOS&nbsp;26 or later.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       FINAL CTA
+  ══════════════════════════════════════════════════════════ -->
+  <section class="cta" aria-label="Download My Prayer Clock">
+    <div class="cta__inner">
+      <h2 class="cta__heading">Ready to pray on time?</h2>
+      <p class="cta__sub">Join thousands of Muslims using My Prayer Clock daily.</p>
+      <a href="https://apps.apple.com/app/my-prayer-clock/id6757612033"
+         class="appstore-badge"
+         target="_blank" rel="noopener"
+         aria-label="Download on the App Store">
+        <img src="app-store-badge.svg" alt="Download on the App Store" width="160" height="53" />
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════ -->
   <footer class="footer" role="contentinfo">
     <div class="footer__inner">
-      <span>© 2025 My Prayer Clock</span>
+      <span>&copy; 2025 My Prayer Clock</span>
       <nav aria-label="Footer links">
         <a href="/privacy">Privacy Policy</a>
         <a href="https://apps.apple.com/app/my-prayer-clock/id6757612033" target="_blank" rel="noopener">App Store</a>

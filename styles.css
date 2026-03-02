@@ -20,10 +20,7 @@ body {
   background-color: var(--cream);
   color: var(--text);
   line-height: 1.6;
-  overflow: hidden;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  min-height: 100%;
 }
 
 img {
@@ -423,8 +420,7 @@ em {
 .hero {
   position: relative;
   padding-top: var(--nav-height);
-  flex: 1 0 0;               /* grow, don't shrink, zero base */
-  min-height: 0;             /* allow flex child to shrink below content size */
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -474,15 +470,11 @@ em {
   position: relative;
   z-index: 1;
   width: min(1160px, 90%);
-  margin: 0 auto;
-  flex: 1;              /* fill all of hero's column space */
-  min-height: 0;        /* allow shrink below content */
-  /* Fallback: explicit height so grid-template-rows:1fr always resolves,
-     even if flex:1 doesn't produce a definite size in some browsers */
-  height: calc(100dvh - var(--nav-height) - var(--footer-h) - 24px);
+  margin: auto;          /* centres vertically in the flex hero */
+  height: calc(100dvh - var(--nav-height) - 24px);
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-rows: 1fr;   /* CRITICAL: forces the single row to fill the container height */
+  grid-template-rows: 1fr;
   gap: clamp(32px, 5vw, 72px);
   align-items: stretch;
   padding: 12px 0;
@@ -589,7 +581,6 @@ em {
    FOOTER — slim single-line strip
 ═══════════════════════════════════════════════════════════════ */
 .footer {
-  flex: none;
   background: var(--cream-warm);
   border-top: 1px solid rgba(26, 24, 20, 0.08);
   padding: 0;
@@ -620,16 +611,114 @@ em {
   color: var(--text-muted);
 }
 
-/* (old footer sub-classes removed — slim footer uses .footer__inner directly) */
+/* ═══════════════════════════════════════════════════════════════
+   FAQ SECTION
+═══════════════════════════════════════════════════════════════ */
+.faq {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: var(--cream);
+}
+
+.faq__inner {
+  width: min(720px, 90%);
+  margin: 0 auto;
+}
+
+.faq__heading {
+  text-align: center;
+  margin-bottom: clamp(32px, 5vw, 56px);
+  color: var(--text);
+}
+
+.faq__item {
+  border-bottom: 1px solid rgba(26, 24, 20, 0.08);
+  padding: 0;
+}
+
+.faq__item:first-of-type {
+  border-top: 1px solid rgba(26, 24, 20, 0.08);
+}
+
+.faq__question {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  font-weight: 600;
+  color: var(--text);
+  padding: 20px 0;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: color 0.2s ease;
+}
+
+.faq__question:hover {
+  color: var(--amber-dark);
+}
+
+/* Custom chevron */
+.faq__question::after {
+  content: '+';
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--text-light);
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.faq__item[open] .faq__question::after {
+  content: '−';
+}
+
+/* Hide default marker */
+.faq__question::-webkit-details-marker { display: none; }
+
+.faq__answer {
+  font-size: clamp(0.88rem, 1.3vw, 1rem);
+  color: var(--text-muted);
+  line-height: 1.7;
+  padding: 0 0 20px 0;
+  max-width: 600px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FINAL CTA SECTION
+═══════════════════════════════════════════════════════════════ */
+.cta {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: var(--cream-warm);
+  text-align: center;
+}
+
+.cta__inner {
+  width: min(600px, 90%);
+  margin: 0 auto;
+}
+
+.cta__heading {
+  margin-bottom: 0.8rem;
+  color: var(--text);
+}
+
+.cta__sub {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
 
 /* ═══════════════════════════════════════════════════════════════
    RESPONSIVE — TABLET (≤ 1024px)
    Stack single-column; phone moves to top; allow scroll
 ═══════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
-  body { overflow: auto; }
-
-  .hero { overflow: visible; }
+  .hero {
+    min-height: auto;
+    overflow: visible;
+  }
 
   .hero__inner {
     grid-template-columns: 1fr;
@@ -641,7 +730,7 @@ em {
     padding: clamp(24px, 4vw, 40px) 0;
   }
 
-  .hero__copy { max-width: 560px; padding-bottom: 48px; }
+  .hero__copy { max-width: 560px; padding-bottom: 32px; }
   .hero__sub  { max-width: 100%; margin-left: auto; margin-right: auto; }
   .hero__eyebrow { justify-content: center; }
   .hero__features { justify-content: center; }
@@ -672,6 +761,11 @@ em {
     width: auto;
     transform: translateX(calc(-50% + 130px));
   }
+
+  .faq__inner { max-width: 90%; }
+  .cta__inner { max-width: 90%; }
+
+  .appstore-badge img { width: 160px; }
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -697,6 +791,18 @@ em {
     justify-content: center;
   }
 
+  .hero__copy { padding-bottom: 24px; }
+
+  .faq { padding: 3rem 0; }
+  .faq__heading { font-size: 1.6rem; }
+  .faq__question { font-size: 0.95rem; padding: 1rem 2.5rem 1rem 0; }
+  .faq__answer { font-size: 0.9rem; }
+
+  .cta { padding: 3rem 0; }
+  .cta__heading { font-size: 1.5rem; }
+
+  .appstore-badge img { width: 140px; }
+
   .footer__inner {
     justify-content: center;
     gap: 1.2rem;
@@ -717,4 +823,12 @@ em {
   .mockup-clip--hero .mockup-img {
     transform: translateX(calc(-50% + 95px));
   }
+
+  .hero__features { gap: 6px 16px; }
+
+  .faq { padding: 2.5rem 0; }
+  .faq__question { font-size: 0.9rem; }
+
+  .cta { padding: 2.5rem 0; }
+  .cta__heading { font-size: 1.3rem; }
 }
