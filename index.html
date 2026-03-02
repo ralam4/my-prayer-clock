@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ─── Primary SEO ─────────────────────────────────────────── -->
+  <title>My Prayer Clock — Prayer Times for Muslims | Free iOS App</title>
+  <meta name="description" content="My Prayer Clock is a beautifully minimal iOS app for all 5 daily Islamic prayer times. Accurate location-based times, Qibla compass, Ramadan tracker, home screen widgets — and total privacy. Free forever." />
+  <meta name="keywords" content="prayer times app, islamic prayer times, muslim prayer app, salah times, fajr dhuhr asr maghrib isha, qibla compass, ramadan app, prayer tracker, adhan app, iOS prayer app" />
+  <meta name="author" content="My Prayer Clock" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://myprayerclock.app/" />
+
+  <!-- ─── Open Graph ────────────────────────────────────────────── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://myprayerclock.app/" />
+  <meta property="og:title" content="My Prayer Clock — Prayer Times for Muslims" />
+  <meta property="og:description" content="A beautifully minimal iOS app for all 5 daily prayers. Accurate times, Qibla compass, Ramadan mode, home screen widgets. Free &amp; privacy-first." />
+  <meta property="og:image" content="https://myprayerclock.app/Home%20Page.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="My Prayer Clock" />
+
+  <!-- ─── Twitter Card ─────────────────────────────────────────── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="My Prayer Clock — Prayer Times for Muslims" />
+  <meta name="twitter:description" content="A beautifully minimal iOS app for all 5 daily prayers. Free &amp; privacy-first." />
+  <meta name="twitter:image" content="https://myprayerclock.app/Home%20Page.png" />
+
+  <!-- ─── JSON-LD Structured Data ──────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "My Prayer Clock",
+    "operatingSystem": "iOS",
+    "applicationCategory": "LifestyleApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "A beautifully minimal iOS app for accurate Islamic prayer times. Qibla compass, Ramadan mode, prayer tracker, widgets. Privacy-first.",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "500", "bestRating": "5" },
+    "url": "https://myprayerclock.app/",
+    "downloadUrl": "https://apps.apple.com/app/my-prayer-clock/id6757612033"
+  }
+  </script>
+
+  <!-- ─── Google Fonts ──────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════
+       NAVIGATION
+  ══════════════════════════════════════════════════════════ -->
+  <header class="nav" role="banner">
+    <div class="nav__inner">
+      <a href="/" class="nav__brand" aria-label="My Prayer Clock home">
+        <img class="nav__logo" src="Logo.png" alt="" aria-hidden="true" width="24" height="24" />
+        <span class="nav__name">My Prayer Clock</span>
+      </a>
+      <a href="https://apps.apple.com/app/my-prayer-clock/id6757612033"
+         class="btn btn--store btn--store-sm"
+         target="_blank" rel="noopener"
+         aria-label="Download My Prayer Clock on the App Store">
+        <svg class="btn__apple" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98l-.09.06c-.22.15-2.19 1.28-2.17 3.83.03 3.02 2.65 4.03 2.68 4.04l-.06.21zM13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </svg>
+        <span>Download</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HERO — fills full viewport
+  ══════════════════════════════════════════════════════════ -->
+  <main class="hero" role="main" aria-label="My Prayer Clock">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+    <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+
+      <!-- LEFT: Copy -->
+      <div class="hero__copy">
+        <p class="hero__eyebrow animate-fadeup" style="--delay:0.05s">Free for iPhone · iOS 16+</p>
+        <h1 class="hero__headline animate-fadeup" style="--delay:0.15s">
+          Prayer Times.<br /><em>Always with you.</em>
+        </h1>
+        <p class="hero__sub animate-fadeup" style="--delay:0.28s">
+          A beautifully minimal app that keeps you on time for all&nbsp;5 daily prayers — zero&nbsp;distractions, zero&nbsp;tracking.
+        </p>
+
+        <div class="hero__actions animate-fadeup" style="--delay:0.40s">
+          <a href="https://apps.apple.com/app/my-prayer-clock/id6757612033"
+             class="appstore-badge"
+             target="_blank" rel="noopener"
+             aria-label="Download on the App Store">
+            <img src="app-store-badge.svg" alt="Download on the App Store" width="160" height="53" />
+          </a>
+        </div>
+
+        <p class="hero__note animate-fadeup" style="--delay:0.50s">Free · No account required · No data collected</p>
+
+        <!-- Compact feature pills -->
+        <div class="hero__features animate-fadeup" style="--delay:0.62s" aria-label="Key features">
+          <div class="hero__feat">
+            <!-- Clock -->
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><polyline points="8,4.5 8,8 10.5,9.5"/></svg>
+            <span>All 5 prayers</span>
+          </div>
+          <div class="hero__feat">
+            <!-- Shield check -->
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 1L2 3.5v4.7C2 11.4 4.7 14.3 8 15c3.3-.7 6-3.6 6-6.8V3.5L8 1z"/><polyline points="5.5,8 7.2,9.8 10.5,6.5"/></svg>
+            <span>Privacy first</span>
+          </div>
+          <div class="hero__feat">
+            <!-- Half circle sun/moon -->
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M8 3a5 5 0 0 1 0 10A5 5 0 0 0 8 3z" fill="currentColor" stroke="none"/><circle cx="8" cy="8" r="5"/><line x1="8" y1="1" x2="8" y2="2.5"/><line x1="8" y1="13.5" x2="8" y2="15"/><line x1="1" y1="8" x2="2.5" y2="8"/><line x1="13.5" y1="8" x2="15" y2="8"/></svg>
+            <span>Light &amp; dark</span>
+          </div>
+          <div class="hero__feat">
+            <!-- Compass -->
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><polygon points="10,6 6,8 6,10 10,8" fill="currentColor" stroke="none"/><polygon points="10,6 8,6 6,10 8,10" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+            <span>Qibla compass</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Rotating mockup -->
+      <div class="hero__phone animate-fadeup" style="--delay:0.45s" aria-hidden="true" id="heroPhone">
+        <div class="hero__carousel">
+          <div class="hero__slide active">
+            <div class="mockup-clip mockup-clip--hero">
+              <img class="mockup-img" src="Home Page.png" alt="" loading="eager" />
+            </div>
+          </div>
+          <div class="hero__slide">
+            <div class="mockup-clip mockup-clip--hero">
+              <img class="mockup-img" src="Ramadan.png" alt="" loading="lazy" />
+            </div>
+          </div>
+          <div class="hero__slide">
+            <div class="mockup-clip mockup-clip--hero">
+              <img class="mockup-img" src="Tracker.png" alt="" loading="lazy" />
+            </div>
+          </div>
+          <div class="hero__slide">
+            <div class="mockup-clip mockup-clip--hero">
+              <img class="mockup-img" src="Qibla.png" alt="" loading="lazy" />
+            </div>
+          </div>
+          <div class="hero__slide">
+            <div class="mockup-clip mockup-clip--hero">
+              <img class="mockup-img" src="Widgets.png" alt="" loading="lazy" />
+            </div>
+          </div>
+          <div class="hero__slide">
+            <div class="mockup-clip mockup-clip--hero">
+              <img class="mockup-img" src="Home Page_Dark.png" alt="" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <div class="hero__phone-glow" aria-hidden="true"></div>
+      </div>
+
+    </div><!-- /.hero__inner -->
+  </main>
+
+  <!-- Slim footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__inner">
+      <span>© 2025 My Prayer Clock</span>
+      <nav aria-label="Footer links">
+        <a href="/privacy">Privacy Policy</a>
+        <a href="https://apps.apple.com/app/my-prayer-clock/id6757612033" target="_blank" rel="noopener">App Store</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // ─── Hero Mockup Carousel ────────────────────────────────────────
+    (function () {
+      var slides = document.querySelectorAll('.hero__slide');
+      if (!slides.length) return;
+      var current = 0;
+      setInterval(function () {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, 3500);
+    })();
+
+    // ─── Hero Parallax (desktop only) ───────────────────────────────
+    var heroPhone = document.getElementById('heroPhone');
+    if (heroPhone && window.matchMedia('(pointer: fine)').matches) {
+      var targetX = 0, targetY = 0, currentX = 0, currentY = 0;
+      document.addEventListener('mousemove', function (e) {
+        var cx = window.innerWidth / 2;
+        var cy = window.innerHeight / 2;
+        targetX = (e.clientX - cx) / cx * 8;
+        targetY = (e.clientY - cy) / cy * 6;
+      });
+      (function loop() {
+        currentX += (targetX - currentX) * 0.06;
+        currentY += (targetY - currentY) * 0.06;
+        heroPhone.style.transform = 'translate(' + currentX + 'px, ' + currentY + 'px)';
+        requestAnimationFrame(loop);
+      })();
+    }
+
+    // ─── Reduced motion ──────────────────────────────────────────────
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('.animate-fadeup').forEach(function(el) {
+        el.style.opacity = 1;
+        el.style.animation = 'none';
+      });
+    }
+  </script>
+</body>
+</html>
