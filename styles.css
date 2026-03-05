@@ -754,6 +754,7 @@ em {
   .mockup-clip--hero {
     width: 260px;
     height: 100%;
+    filter: none; /* drop-shadow on a clipped rect looks like a box on mobile */
   }
 
   .mockup-clip--hero .mockup-img {
